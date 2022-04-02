@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from .forms import ContactForm
 
 
 mod = Blueprint('index', __name__,
@@ -7,4 +8,5 @@ mod = Blueprint('index', __name__,
 
 @mod.route('/')
 def index():
-    return render_template('contactform/index.html')
+    form = ContactForm()
+    return render_template('contactform/index.html', form=form)

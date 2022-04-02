@@ -1,1 +1,8 @@
 <h1>Contact form with redis queue</h1>
+<form method="POST" action="/">
+    {{ form.csrf_token }}
+    {{ form.sender.label }} {{ form.sender(size=20) }}</br>
+    {{ form.subject.label }} {{ form.subject(size=20) }}</br>
+    {{ form.content.label }} {{ form.content(size=20) }}</br>
+    <input type="submit" value="Go">
+</form>
