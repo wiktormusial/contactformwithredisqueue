@@ -1,8 +1,6 @@
-from flask import Flask
+from contact import create_app
 
 
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return 'Contact form with redis queue'
+if __name__ == '__main__':
+    app = create_app()
+    app.run()
